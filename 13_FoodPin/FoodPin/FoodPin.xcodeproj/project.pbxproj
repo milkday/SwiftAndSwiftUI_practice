@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9524F6F02918095400FED7CA /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9524F6EE2918095400FED7CA /* Nunito-Bold.ttf */; };
 		9524F6F12918095400FED7CA /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9524F6EF2918095400FED7CA /* Nunito-Regular.ttf */; };
+		95B95ECC291B4BAB0080355F /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B95ECB291B4BAB0080355F /* ReviewView.swift */; };
 		95D5C0662918E2540083BE38 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D5C0652918E2540083BE38 /* UIColor+Ext.swift */; };
 		95D5C0682918EE990083BE38 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D5C0672918EE990083BE38 /* MapView.swift */; };
 		F463E30E270182F900F25C63 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F463E30D270182F900F25C63 /* Restaurant.swift */; };
@@ -24,6 +25,7 @@
 		9524F6EE2918095400FED7CA /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		9524F6EF2918095400FED7CA /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		9524F6F229180A4C00FED7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		95B95ECB291B4BAB0080355F /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		95D5C0652918E2540083BE38 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		95D5C0672918EE990083BE38 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F463E30D270182F900F25C63 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				F463E3112701DD4C00F25C63 /* ActivityView.swift */,
 				F463E3132702C4EC00F25C63 /* RestaurantDetailView.swift */,
 				95D5C0672918EE990083BE38 /* MapView.swift */,
+				95B95ECB291B4BAB0080355F /* ReviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B95ECC291B4BAB0080355F /* ReviewView.swift in Sources */,
 				95D5C0682918EE990083BE38 /* MapView.swift in Sources */,
 				F4C0D11A26F9C46300AC5088 /* RestaurantListView.swift in Sources */,
 				F463E3142702C4EC00F25C63 /* RestaurantDetailView.swift in Sources */,
