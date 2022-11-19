@@ -11,12 +11,16 @@ struct RestaurantListView: View {
     
     @FetchRequest(
         entity: Restaurant.entity(),
-        sortDescriptors: []
+        sortDescriptors: [],
+        predicate: NSPredicate(format: "name CONTAINS[c] %@", "cafe")
     )
     
     var restaurants: FetchedResults<Restaurant>
-    
+    @State private var searchText = ""
     @State private var showNewRestaurant = false
+    @State private var showWalkthrouth = false
+    @AppStorage("hasViewedWalkthrouth") var hasViewedWalkthrouth: Bool = false
+
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
@@ -52,12 +56,27 @@ struct RestaurantListView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
-
+                
             }
         }
         .accentColor(.primary)
         .sheet(isPresented: $showNewRestaurant) {
             NewRestaurantView()
+        }
+        .searchable(text: $searchText,
+                    placement: .automatic, prompt: "Search restaurants..."){
+            Text("Thai").searchCompletion("Thai")
+            Text("Cafe").searchCompletion("Cafe")
+        }
+        .onChange(of: searchText) { searchText in
+            let predicate = searchText.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@ OR location CONTAINS[c] %@", searchText,searchText)
+            restaurants.nsPredicate = predicate
+        }
+        .sheet(isPresented: $showWalkthrouth) {
+            TutorialView()
+        }
+        .onAppear(){
+            showWalkthrouth = hasViewedWalkthrouth ? false : true
         }
     }
     

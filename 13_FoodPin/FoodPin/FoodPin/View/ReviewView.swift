@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReviewView: View {
     
-    var restaurant:Restaurant
+    var restaurant: Restaurant
     @Binding var isDisplayed:Bool
     @State private var showRatings = false
     

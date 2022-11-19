@@ -11,6 +11,8 @@ import MapKit
 struct MapView: View {
     
     var location:String = ""
+    var interactionModes: MapInteractionModes = .all
+
     @State private var region:MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.510357, longitude: -0.116773), span: MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0))
     @State private var annotatedItem:AnnotatedItem = AnnotatedItem(coordinate: CLLocationCoordinate2D(latitude: 51.510357, longitude: -0.116773))
     
