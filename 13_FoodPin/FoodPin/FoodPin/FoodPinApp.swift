@@ -14,9 +14,8 @@ struct FoodPinApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RestaurantListView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-
         }
     }
     
