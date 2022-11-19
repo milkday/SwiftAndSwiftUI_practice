@@ -39,7 +39,6 @@ struct RestaurantListView: View {
                             .opacity(0)
                             
                             BasicTextImageRow(restaurant: restaurants[index])
-                            
                         }
                     }
                     .onDelete(perform: deleteRecord(indexSet:))
